@@ -22,4 +22,30 @@ Explanation:
  Here only element is present and so 
 the element at first index will be shifted to 
 last index which is also by the way the first index.
+-----------------------------------------------------------------------------------------------------------------------------
+import java.util.*;
+
+public class Main {
+    public static void function(int n, int[] arr) {
+      // Store the first value within the variable.
+      int x = arr[0];
+      // traverse from index 1 to the end and put the value within i-1 index.
+      for(int i=1;i<n;i++) {
+        arr[i-1] = arr[i];
+      }
+      // Assing last value.
+      arr[n-1] = x;
+    }
+    public static void main(String[] args) {
+      int[] arr = {3};
+      int n = arr.length;
+      function(n, arr);
+      System.out.println("The output after calling the function: ");
+      for(int i=0;i<n;i++) {
+        System.out.print(arr[i]+" ");
+      }
+  }
+}
+// Time Complexity: O(N)
+// Space Complexity: O(1)
 
