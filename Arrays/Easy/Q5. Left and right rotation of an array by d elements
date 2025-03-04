@@ -82,6 +82,48 @@ public class Main {
 }
 // Time complexity: O(N)+O(d).
 // Space complexity: O(d).
+------------------------------------------------------------------------------------------------------------------------------
+Optimal Approach: Reversal Algorithm For Left Rotation:
+Optimal approach: Reversal Algorithm: for left rotation.
+import java.util.*;
+
+public class Main {
+    public static void reverse(int[] arr, int left, int right) {
+      while(left < right) {
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+        left++;
+        right--;
+      }
+    }
+    public static void leftRotation(int[] arr, int d, int n) {
+      reverse(arr, 0, d-1);
+      reverse(arr, d, n-1);
+      reverse(arr, 0, n-1);
+    }
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      int n = sc.nextInt();
+      int[] arr = new int[n];
+      for(int i=0;i<n;i++) {
+        arr[i] = sc.nextInt();
+      }
+      int d = sc.nextInt();
+      leftRotation(arr,d,n);
+      System.out.println("Array after rotation:");
+      for(int i=0;i<n;i++) {
+        System.out.print(arr[i]+" ");
+      }
+  }
+}
+
+// Time complexity of whole program: O(N).
+// Space complexity of whole program: O(N). // Considering main function.
+
+// Time complexity of method function: O(N).
+// Space complextiy of function: O(1).
+
 
 
 
