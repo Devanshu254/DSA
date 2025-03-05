@@ -37,3 +37,47 @@ public class Main {
 // Time Complexity: O(4N)
 // Space Complexity: O(N) - We are using extra temp array.
 -----------------------------------------------------------------------------------------------------------------------------
+Optimal Approach: TC: O(N), Auxilary space: O(1)
+
+import java.util.*;
+
+public class Main {
+    public static void moveZerosToEnd(int[] arr, int n) {
+      // Optimal approach.
+      // Find 0 and place j there.
+      int j = -1;
+      for(int i=0;i<n;i++) {
+        if(arr[i] == 0) {
+          j = i;
+          break;
+        }
+      }
+      // If there is no zeros in the array, return the original array.
+      if(j==-1) {
+        for(int i=0;i<n;i++) {
+          System.out.print(arr[i] + " ");
+        }
+        return;
+      }
+      // Traverse i from j+1 to the end and swap it with arr[j] if arr[i]!=0 and j++.
+      for(int i=j+1;i<n;i++) {
+        // swap arr[j] with arr[i] if arr[i]!=0.
+        if(arr[i]!=0) {
+          // swap arr[j] with arr[i].
+          int temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+          // increment j. 
+          j++;
+        }
+      }
+      for(int i=0;i<n;i++) {
+        System.out.print(arr[i]+" ");
+      }
+    }
+    public static void main(String[] args) {
+      int[] arr = {1,2,0,3,2,4,5,1};
+      int n = arr.length;
+      moveZerosToEnd(arr,n);
+  }
+}
