@@ -33,3 +33,6 @@ let n=5;
 const obj = new Solution();
 const result = obj.getTable(n);
 console.log(result);
+
+
+// In real applications, JavaScript receives input via browser events or HTTP requests. Stdin handling is mainly used in competitive programming, typically via readline or fs.
