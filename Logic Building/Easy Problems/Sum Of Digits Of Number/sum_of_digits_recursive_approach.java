@@ -1,10 +1,14 @@
+import java.util.Scanner;
+
 public class sum_of_digits_recursive_approach {
     static int sumOfDigits(int n) {
         if(n==0) return 0;
         return (n%10)+sumOfDigits(n/10);
     }
     public static void main(String args[]) {
-        int n = 12345;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int n = sc.nextInt();
         int result = sumOfDigits(n);
         System.out.println(result);
     }
