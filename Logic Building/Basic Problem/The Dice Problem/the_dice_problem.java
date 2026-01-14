@@ -25,15 +25,20 @@
 //     }
 // }
 
-
 // Optimal Solution.
+
+import java.util.Scanner;
+
 class the_dice_problem {
     static int diceProblem(int n) {
-        return (7-n);
+        return (7 - n);
     }
+
     public static void main(String args[]) {
-        int n = 5;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the input: ");
+        int n = sc.nextInt();
         int result = diceProblem(n);
-        System.out.println(result);
+        System.out.println("The next phase of dice is: "+result);
     }
 }
