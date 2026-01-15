@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class prime_number {
     static boolean primeNumber(int n) {
         if(n<=1) return false;
@@ -7,7 +9,8 @@ public class prime_number {
         return true;
     }
     public static void main(String[] args) {
-        int n = 5;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
         System.out.print(primeNumber(n));
     }
 }
