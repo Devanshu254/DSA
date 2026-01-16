@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class if_y_is_power_of_x {
     public static boolean isPower(int x, int y) {
         if (x == 1) {
@@ -20,8 +22,11 @@ public class if_y_is_power_of_x {
     }
 
     public static void main(String args[]) {
-        int x = 2;
-        int y = 30;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of x: ");
+        int x = sc.nextInt();
+        System.out.print("Enter the value of y: ");
+        int y = sc.nextInt();
         boolean result = isPower(x, y);
         System.out.println(result);
     }
