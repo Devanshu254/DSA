@@ -31,3 +31,6 @@ public class if_y_is_power_of_x {
         System.out.println(result);
     }
 }
+
+// Time complexity: O(Logxy)
+// Auxiliary space: O(1)
