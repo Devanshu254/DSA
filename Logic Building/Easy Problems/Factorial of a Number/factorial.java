@@ -17,6 +17,8 @@
 //     }
 // }
 
+import java.util.Scanner;
+
 public class factorial {
     public static int Factorial(int n) {
         if(n == 0 || n == 1) {
@@ -25,7 +27,9 @@ public class factorial {
         return n*Factorial(n-1);
     }
     public static void main(String args[]) {
-        int n = 5;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value: ");
+        int n = sc.nextInt();
         int result = Factorial(n);
         System.out.print(result);
     }
