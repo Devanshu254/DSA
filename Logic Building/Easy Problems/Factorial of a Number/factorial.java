@@ -1,5 +1,7 @@
+import java.util.Scanner;
+
 public class factorial {
-    public static int factorial(int n) {
+    public static int Factorial(int n) {
         int ans = 1;
         for(int i=2;i<=n;i++){
             ans = ans * i;
@@ -7,8 +9,10 @@ public class factorial {
         return ans;
     }
     public static void main(String args[]) {
-        int n = 5;
-        int result = factorial(n);
-        System.out.print(result);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of N: ");
+        int n = sc.nextInt();
+        int result = Factorial(n);
+        System.out.print("The result is: "+result);
     }
 }
