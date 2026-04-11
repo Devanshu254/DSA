@@ -30,6 +30,7 @@ public class factorial {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the value: ");
         int n = sc.nextInt();
+        sc.close();
         int result = Factorial(n);
         System.out.print(result);
     }

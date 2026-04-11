@@ -15,6 +15,7 @@ public class prime_number {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the value: ");
         int n = sc.nextInt();
+        sc.close();
         System.out.print(primeNumber(n));
     }
 }
