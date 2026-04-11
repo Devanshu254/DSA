@@ -16,6 +16,7 @@ public class valid_triangle {
         int b = sc.nextInt();
         System.out.print("Enter the value of c: ");
         int c = sc.nextInt();
+        sc.close();
         boolean result = validTriange(a,b,c);
         System.out.print(result);
     }

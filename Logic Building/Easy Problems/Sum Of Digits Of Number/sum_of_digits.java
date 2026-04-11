@@ -14,6 +14,7 @@ public class sum_of_digits {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number: ");
         int n = sc.nextInt();
+        sc.close();
         int result = sumOfDigits(n);
         System.out.print(result);
     }
