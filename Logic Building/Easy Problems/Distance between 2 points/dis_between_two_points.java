@@ -18,5 +18,6 @@ public class dis_between_two_points {
         int y2 = sc.nextInt();
         int distance = disTwoPoints(x1, y1, x2, y2);
         System.out.print("The distance is: "+ distance);
+        sc.close();
     }
 }

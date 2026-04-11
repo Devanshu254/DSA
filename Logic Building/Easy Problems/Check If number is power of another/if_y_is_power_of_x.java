@@ -29,6 +29,7 @@ public class if_y_is_power_of_x {
         int y = sc.nextInt();
         boolean result = isPower(x, y);
         System.out.println(result);
+        sc.close();
     }
 }
 
